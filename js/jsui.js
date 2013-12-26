@@ -11,10 +11,10 @@ jQuery.jsui=function(){
         $("[jsui]").each(function(){
             var the=this
             seajs.use($(this).attr("jsui"),function(dom){
-                if(!the.init){
-                    $.extend(the,dom)
-                }
-                the.init&&the.init()
+				if(!the.init&&dom.init){
+					$.extend(the,dom)
+					the.init()
+				}
             })
         })
 }
