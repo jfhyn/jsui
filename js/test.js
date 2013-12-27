@@ -1,16 +1,13 @@
-//特殊js 异步渲染
+//新标签
 define(function(require,exports,module){
+    //动态解析
     module.exports={
-        state:false,
         //初始化
         init:function(){
-            if(this.state)return;
-            this.state=true;
             var txt=$(".title",this).text()
-            $(".title",this).text(txt+"添加js效果")
-        },
-        update:function(){
-
+            $(".title",this).click(function(){
+                alert(txt+"添加js效果")
+            })
         }
     }
 })
