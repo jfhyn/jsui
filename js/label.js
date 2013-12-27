@@ -1,0 +1,12 @@
+//新标签
+define(function(require,exports,module){
+    //动态解析
+    module.exports={
+        //初始化
+        init:function(){
+            $(this).click(function(){
+                $(this).html("我被点击了")
+            })
+        }
+    }
+})

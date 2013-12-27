@@ -1,0 +1,43 @@
+
+<script type="text/tcl" url="top.json" jsui="ejs">
+    <div class="block blo1" jsui="test">
+        <div class="title"><%=title%></div>
+        <div class="module">
+            <ul>
+                <% for(var i=0;i< module.length;i++){
+                var list=module[i];
+                %>
+                <li><a href="<%=list.href%>" title="<%=list.title%>"><%=list.title%></a></li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script type="text/tcl" data="blo1">
+    {
+    "title":"同步渲染",
+    "module":[{
+    "title":"商品1",
+    "href":"#"
+    },{
+    "title":"商品1",
+    "href":"#"
+    }]
+    }
+</script>
+
+<script type="text/tcl" getdata="blo1" jsui="ejs">
+    <div class="block blo1"  jsui="test">
+        <div class="title"><%=title%></div>
+        <div class="module">
+            <ul>
+                <% for(var i=0;i< module.length;i++){
+                var list=module[i];
+                %>
+                <li><a href="<%=list.href%>" title="<%=list.title%>"><%=list.title%></a></li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</script>
