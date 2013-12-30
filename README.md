@@ -11,6 +11,6 @@ jsui
 
 本身可以作为js的管理框架使用
 
-项目地址
+项目地址 https://github.com/caoke90/jsui
 
 
